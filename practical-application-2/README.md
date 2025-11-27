@@ -1,4 +1,4 @@
-# Practical Appication 2: What Drives the Price of a Car?
+# Practical Application 2: What Drives the Price of a Car?
 
 > **📌 Note:**  
 > To run the Jupyter notebook, please download the `vehicles.csv` dataset and place it in the `data/` folder.
