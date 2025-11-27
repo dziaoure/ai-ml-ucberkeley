@@ -64,4 +64,4 @@ Based on the analysis and charts above, the business question can now be answere
 
 ## 6. Deployment
 
-No deployment is necessary for this application since it is a simple data analysis to answer abusiness question.
+No deployment is necessary for this application since it is a simple data analysis to answer a business question.
