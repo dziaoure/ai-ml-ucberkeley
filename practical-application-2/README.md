@@ -4,6 +4,7 @@
 > To run the Jupyter notebook, please download the `vehicles.csv` dataset and place it in the `data/` folder.
 
 
+
 This goal of this project is to analyze more than 400,000 used-car listings and identify the key factors that influence the price of a used car. 
 
 It uses Machine Learning techniques to build a model for predicting used car prices. It then evaluates those predictions to make recommendations to used-car delears, helping them make informed pricing decisions and inventory optimization.
