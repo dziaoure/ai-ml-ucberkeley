@@ -1,5 +1,8 @@
 # Practical Appication 2: What Drives the Price of a Car?
 
+> **📌 Note:**  
+> To run the Jupyter notebook, please download the `vehicles.csv` dataset and place it in the `data/` folder.
+
 
 This goal of this project is to analyze more than 400,000 used-car listings and identify the key factors that influence the price of a used car. 
 
