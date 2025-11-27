@@ -3,16 +3,16 @@
 
 This goal of this project is to analyze more than 400,000 used-car listings and identify the key factors that influence the price of a used car. 
 
-It uses Machine Learning techniques to build a model for predicting used car sales. It then evaluates those predictions to make recommendations to used-car delears, helping them make informed pricing decisions and inventory optimization.
+It uses Machine Learning techniques to build a model for predicting used car prices. It then evaluates those predictions to make recommendations to used-car delears, helping them make informed pricing decisions and inventory optimization.
 
-I'll apply the CRISP-DM framework to describe the process for analyzing the data, building the model, and achieving the intended business objective.
+We'll apply the CRISP-DM framework to describe the process for analyzing the data, building the model, and achieving the intended business objective.
 
 
 ## 1. Business Understanding 
 
 Used-car dealers need a reliable way to estimate the prices of their vehicles and to understand which features most strongly affect those prices.
 
-As previously stated, the goal of this project is to identify those features. So the main business question can be stated as follows: **Which features most strongly affect the price of a used car, and which regression model provides the most accurate price predictions?**
+As previously stated, the goal of this project is to identify those features. So the main business question can be stated as follows: **Which features most strongly affect the price of a used car, and which regression model provides the most accurate price predictions based on those features?**
 
 
 ## 2. Data Undestanding
@@ -36,7 +36,7 @@ Overall, its size and contents were appropriate for training and testing a predi
 
 ## 3. Data Preparation
 
-The initial analysis of the dataset revealed that there were significant outliers in the price column. For instance, the maximum price was $3,736,929,000, and the standard deviation was 12,182,280. 
+The initial analysis of the dataset revealed that there were significant outliers in the `price` column. For instance, the maximum price was $3,736,929,000, and the standard deviation was $12,182,280. 
 
 To confirm the presence of outliers, a scatter plot of the data was created, as shown below.
 
@@ -65,9 +65,9 @@ Next, two regression models were created:
 
 The models were then trained and evaluated using their **Mean Squared Error (MSE)**.
 
-The Linear Regression model delivered an MSE of **62284654** and an RNSE of **7892**, meaning that its predictions were off by **$7,892**.
+The Linear Regression model delivered a test MSE of **62284654** and a test RMSE of **7892**, meaning that its predictions were off by **$7,892**.
 
-The Ridge Regression model delivered the best performance, with an MSE of **50598928** and an RMSE of **7113**. Its predictions were off by **$7,113**. 
+The Ridge Regression model delivered the best performance, with a test MSE of **50598928** and a test RMSE of **7113**. Its predictions were off by **$7,113**. 
 
 As a result, we chose Ridge as our best model.
 
@@ -76,7 +76,7 @@ As a result, we chose Ridge as our best model.
 
 To identify the top 5 features, the Ridge feature names and coefficients were grouped by their parent feature names (for instance, `categorical__model_Lamborghini Huracan` → `model`).
 
-Those top 5 feature were:
+The top 5 feature were:
 
 1. **Model**
 2. **Manufacturer**
@@ -94,7 +94,7 @@ A plot was created to show their relative importance.
 The findings were presented to the target audience, a group of used-car dealers. The following recommendations were then made:
 
 - Prioritizing high-demand models from well-known manufacturers.
-- Updating their inventory with newer model years and vehicles with low mileage.
+- Updating their inventory with newer model years and with vehicles with low mileage.
 - Adding vehicles with the most desirable fuel types to their inventory if necessary.
 
 A future version of the model will include additional features and improved algorithms, thus making even better predictions.
