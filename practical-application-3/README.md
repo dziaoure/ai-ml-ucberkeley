@@ -2,14 +2,14 @@
 
 ## Overview
 
-This project compares the performance of several classification models—Logistic Regression, K-Nearest Neighbors, Decision Trees, and Support Vector Machines—using a real-world dataset from a Portuguese bank’s telephone-based marketing campaigns. The objective is to evaluate how effectively each model predicts whether a client will subscribe to a term deposit, while considering both predictive performance and computational cost.
+This project compares the performance of four classification models—Logistic Regression, K-Nearest Neighbors, Decision Trees, and Support Vector Machines—using a real-world dataset from a Portuguese bank’s telephone-based marketing campaigns. The objective is to evaluate how effectively each model predicts whether a client will subscribe to a term deposit, while considering both predictive performance and computational cost.
 
 The project follows the CRISP-DM methodology, moving from business understanding and data preparation to modeling, evaluation, and future improvement considerations.
 
 
 ## Business Understanding
 
-The primary business objective is to improve the efficiency of bank marketing campaigns by identifying clients who are most likely to subscribe to a long-term deposit product. By accurately predicting positive responses, the bank can reduce unnecessary contact attempts while maintaining or increasing the number of successful subscriptions.
+The primary business objective is to improve the efficiency of a bank's marketing campaigns by identifying clients who are most likely to subscribe to a long-term deposit product. By accurately predicting positive responses, the bank can reduce unnecessary contact attempts while maintaining or increasing the number of successful subscriptions.
 
 
 ## Dataset
