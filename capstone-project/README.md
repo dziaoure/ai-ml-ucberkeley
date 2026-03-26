@@ -29,12 +29,12 @@ The goal of this project is therefore not just to build an accurate model, but t
 
 ### Success Criteria
 
-Because the goal is early intervention, recall for the dropout class is considered the most important metric. Missing a student who is at risk (false negative) is more costly than incorrectly flagging a student as at risk (false positive), since early support could help prevent dropout.
+Because the goal is early intervention, **recall for the dropout class** is considered the most important metric. Missing a student who is at risk (false negative) is more costly than incorrectly flagging a student as at risk (false positive), since early support could help prevent dropout.
 
 
 ## 2. Data Understanding
 
-This project uses the **"Predict Students’ Dropout and Academic Success"** dataset from the UCI Machine Learning Repository. The dataset contains **4,424 student records** and includes demographic, academic, financial, and institutional information collected at the time of enrollment and during the first academic semester.
+This project uses the **"Predict Students’ Dropout and Academic Success"** dataset from the UCI Machine Learning Repository. The dataset contains **4,424 student records** and includes demographic, academic, financial, and institutional information collected at the time of enrollment.
 
 The target variable indicates whether a student:
 - Dropped out
@@ -55,9 +55,9 @@ The dataset includes several categories of features, including:
 - Academic background (e.g., previous qualification, admission grade)
 - Institutional information (e.g., application mode, course, attendance type)
 - Financial information (e.g., tuition fees status, scholarship status)
-- Academic performance (first semester) (e.g., number of enrolled units, approved units, grades)
+- Academic performance (e.g., number of enrolled units, approved units, grades)
 
-Only information available at or shortly after enrollment was used to build the model, ensuring that the model reflects a realistic early prediction scenario and avoids data leakage from future academic performance.
+Only information for the first semester was used to build the model, ensuring that the model reflects a realistic early prediction scenario and avoids data leakage from future academic performance.
 
 ### Initial Exploratory Data Analysis (EDA)
 
@@ -74,7 +74,7 @@ The EDA phase helped guide data cleaning, feature engineering, and model selecti
 The data preparation phase focused on cleaning the dataset, preventing data leakage, engineering meaningful features, and building a reusable preprocessing pipeline for modeling.
 
 The following steps were performed:
-- Removed second-semester variables to prevent data leakage, since the goal is to predict dropout risk early using only information available at or shortly after enrollment.
+- Removed second-semester variables to prevent data leakage, since the goal is to predict dropout risk early using only information from the first semester.
 - Standardized column names for consistency and readability.
 - Converted categorical features to appropriate data types for encoding.
 - Converted the target variable into a binary classification problem:
@@ -230,7 +230,7 @@ For this student, several factors pushed the prediction toward dropout, particul
 
 ![Student 2 - Predicted No Dropout](images/shap-waterfall-non-dropout.png)
 
-For this student, several protective factors pushed the prediction toward non-dropout, including father’s occupation, mother’s qualification, and mother’s occupation. While some risk factors were present, their impact was smaller than the protective factors, resulting in a prediction that the student would continue their studies.
+For this student, several protective factors pushed the prediction toward non-dropout, including father’s occupation, educational special needs, and mother’s qualification. While some risk factors were present, their impact was smaller than the protective factors, resulting in a prediction that the student would continue their studies.
 
 
 ### Comparative Analysis
